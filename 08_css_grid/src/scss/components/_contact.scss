@@ -1,0 +1,135 @@
+/* stylelint-disable order/order */
+.contact {
+  padding: 68px 0;
+  background-color: var(--light-color);
+
+  &__title {
+    margin: 0;
+    margin-bottom: 26px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__left {
+    position: relative;
+    grid-column: 1 / 8 span;
+    grid-row: 1 / 1;
+    background-image: url("../../img/map.jpg");
+    background-repeat: no-repeat;
+  }
+
+  &__dark {
+    position: relative;
+    z-index: 5;
+    grid-column: 1 / 4 span;
+    grid-row: 1 / 1;
+    background: rgb(32 32 32 / 85%);
+  }
+
+  &__main {
+    position: relative;
+    z-index: 10;
+    margin: auto 0;
+    padding-top: 22px;
+    padding-right: 50px;
+    padding-left: 60px;
+    width: 48.24%;
+
+    &-title {
+      margin: 0;
+      margin-bottom: 5px;
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 92%;
+      color: var(--light-color);
+    }
+  }
+
+  &__x {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  &__address {
+    margin: 0;
+    margin-bottom: 2px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: var(--silver);
+  }
+
+  &__call {
+    align-items: center;
+
+    &-svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+  }
+
+  &__phone {
+    align-items: center;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--orange-red);
+    transition: color 0.3s ease-in-out;
+
+    @include hover {
+      color: var(--dark-orange);
+    }
+
+    &:active {
+      color: var(--orange-red);
+    }
+  }
+
+  &__right {
+    grid-column: 4 span;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-top: -7px;
+    margin-bottom: 5px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 92%;
+    color: var(--dark-color);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    color: var(--grey);
+  }
+
+  &__form {
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__textarea {
+    margin-bottom: -4px;
+    padding-bottom: 26px;
+  }
+}
+
+.contact__phone.focus-visible {
+  color: var(--brown);
+  outline: 0 solid transparent;
+}
+
+.contact__phone.focus-visible:active {
+  color: var(--orange-red);
+}

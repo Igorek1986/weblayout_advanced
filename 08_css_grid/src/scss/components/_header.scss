@@ -1,0 +1,86 @@
+/* stylelint-disable order/order */
+.header {
+  padding: 23px 0;
+  background-color: #202020;
+
+  &__container {
+    align-items: center;
+  }
+
+  &__logo {
+    grid-column: 2 span;
+  }
+
+  &__nav {
+    grid-column: 4 / 7 span;
+  }
+
+  &__btn {
+    justify-content: end;
+    grid-column: 12 / 1 span;
+    padding: 0;
+    background-color: transparent;
+  
+    @include hover {
+      background-color: transparent;
+    }
+  }
+
+  &__search {
+    width: 25px;
+    height: 25px;
+    fill: var(--light-color);
+    transition: fill 0.3s ease-in-out;
+
+    @include hover {
+      fill: var(--orange-red);
+    }
+
+    &:active {
+      fill: var(--dark-orange);
+    }
+  }
+}
+
+.nav {
+  &__list {
+    gap: 79px;
+  }
+
+  &__link {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--light-color);
+    transition:
+      color 0.3s ease-in-out,
+      background 0.3s ease-in-out,
+      outline 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      color: var(--orange-red);
+    }
+
+    &:active {
+      color: var(--dark-orange);
+    }
+  }
+}
+
+.nav__link.focus-visible {
+  outline: 5px solid var(--brown);
+  outline-offset: -1px;
+  background: var(--brown);
+}
+
+.search.focus-visible {
+  outline: 0 solid transparent;
+  .header__search {
+    fill: var(--orange-red);
+  }
+}

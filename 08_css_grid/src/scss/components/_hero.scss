@@ -1,0 +1,66 @@
+.hero {
+  padding-top: 41px;
+  padding-bottom: 68px;
+
+  &__main {
+    position: relative;
+    grid-column: 6 span;
+    padding-top: 405px;
+    padding-left: 59px;
+    background-image: url("../../img/hero_1.jpg");
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 3px;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--light-color);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 19px;
+    width: 75%;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 104%;
+    color: var(--light-color);
+  }
+
+  &__submain {
+    grid-column: 6 span;
+
+    &-img:first-child {
+      grid-column: 12 span;
+      margin-bottom: var(--offset);
+    }
+
+    &-img {
+      grid-column: 6 span;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 18px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 104%;
+    color: var(--dark-color);
+  }
+
+  &__master-class {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    margin: 0;
+    padding: 7px 15px;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--light-color);
+    background-color: var(--dark-color);
+  }
+}

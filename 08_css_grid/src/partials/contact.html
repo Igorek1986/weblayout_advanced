@@ -1,0 +1,45 @@
+<section class="contact">
+  <div class="container">
+    <h3 class="contact__title">Контакты</h3>
+    <div class="contact__content grid">
+      <div class="contact__left flex">
+        <div class="contact__main">
+          <h1 class="contact__main-title">Студия «High pass»</h1>
+          <p class="contact__address">107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82</p>
+          <!-- <img src="../img/call.svg" alt="трубка" class="contact__call-img"> -->
+          <!-- <svg class="contact__call-svg">
+            <use xlink:href="../img/sprite.svg#call"></use>
+          </svg> -->
+          <div class="contact__call flex">
+            <a href="tel:749542423532" class="contact__phone flex">
+              <svg class="contact__call-svg">
+                <use xlink:href="../img/sprite.svg#call"></use>
+              </svg>
+              +7 495 424-23-532</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact__dark">
+        <div class="contact__x"><img src="../img/х.svg" alt="X"></div>
+      </div>
+      <div class="contact__right">
+        <h3 class="contact__subtitle">Оставить заявку</h3>
+        <p class="contact__descr">Оставьте ваши данные, указав в графе «Комментарий» желаемые время и дату съёмки или другого мероприятия</p>
+        <form action="https://jsonplaceholder.typicode.com/posts" class="contact__form flex">
+          <div class="input-wrapper w-100">
+            <input type="text" class="placeholder contact__form-name w-100" id="name" placeholder="Имя" pattern="[a-zA-Zа-яА-Я].*">
+            <div class="error-message"></div>
+          </div>
+          <div class="input-wrapper w-100">
+            <input type="email" id="contact_email" placeholder="Email" class="placeholder contact__email w-100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+            <div class="error-message"></div>
+          </div>
+          <div class="input-wrapper w-100">
+            <textarea name="message" id="message" cols="30" rows="6" class="placeholder contact__textarea w-100" placeholder="Комментарий"></textarea>
+          </div>
+          <button class="btn btn-reset contact__btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

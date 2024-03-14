@@ -1,0 +1,158 @@
+/* stylelint-disable order/order */
+.project {
+  padding-top: 71px;
+  background-color: var(--light-color);
+
+  &__title {
+    grid-column: 12 span;
+    margin: 0;
+    margin-bottom: 12px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--dark-color);
+  }
+
+  &__content {
+    grid-column: 12 span;
+    row-gap: var(--offset);
+  }
+
+  &__card-1 {
+    position: relative;
+    flex-wrap: wrap;
+    grid-column: 2 span;
+
+    &--gc {
+      grid-column: 3 span;
+    }
+
+    &-descr {
+      margin: 0;
+      margin-bottom: 10px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 137%;
+      color: var(--dark-color);
+
+      &--bg {
+        margin-bottom: 0;
+        width: 49%;
+        color: var(--light-color);
+      }
+    }
+
+    &-date {
+      display: flex;
+      align-items: center;
+
+      &-bg {
+        margin-bottom: 5px;
+      }
+    }
+
+    &-text {
+      margin: 0;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 183%;
+      color: var(--grey);
+
+      &--bg {
+        font-size: 12px;
+        color: var(--light-color);
+      }
+    }
+  }
+
+  &__img {
+    margin-bottom: 18px;
+  }
+
+  &__sticker {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    padding: 6px 14px;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: var(--light-color);
+    background-color: var(--dark-color);
+  }
+
+  &__card-bg {
+    position: relative;
+    flex-direction: column;
+    grid-column: 6 span;
+
+    &-content {
+      padding-top: 26px;
+      padding-left: 30px;
+    }
+
+    &-1 {
+      background-image: url("../../img/project_bg_1.jpg");
+      background-repeat: no-repeat;
+    }
+
+    &-2 {
+      background-image: url("../../img/project_bg_2.jpg");
+      background-repeat: no-repeat;
+    }
+
+    &-bottom {
+      margin-top: auto;
+      padding-bottom: 30px;
+      padding-left: 30px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 6px;
+    width: 45%;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: var(--light-color);
+  }
+
+  &__btn {
+    border: 3px solid var(--orange-red);
+    padding: 13px 20px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, border 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      border-color: var(--brown);
+      background-color: var(--brown);
+    }
+
+    &:active {
+      border-color: var(--dark-orange);
+      background-color: var(--dark-orange);
+    }
+  }
+}
+
+.project__btn.focus-visible {
+  border: 3px solid var(--orange-red);
+  background-color: var(--brown);
+}
+
+.calendar {
+  margin-right: 4px;
+  width: 14px;
+  height: 14px;
+  fill: var(--grey);
+}
+
+.calendar-bg {
+  fill: var(--light-color);
+}
