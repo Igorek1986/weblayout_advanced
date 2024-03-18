@@ -2,25 +2,29 @@
   <div class="container">
     <h3 class="contact__title">Контакты</h3>
     <div class="contact__content grid">
-      <div class="contact__left flex">
-        <div class="contact__main">
-          <h1 class="contact__main-title">Студия «High pass»</h1>
-          <p class="contact__address">107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82</p>
-          <!-- <img src="../img/call.svg" alt="трубка" class="contact__call-img"> -->
-          <!-- <svg class="contact__call-svg">
-            <use xlink:href="../img/sprite.svg#call"></use>
-          </svg> -->
-          <div class="contact__call flex">
-            <a href="tel:749542423532" class="contact__phone flex">
-              <svg class="contact__call-svg">
-                <use xlink:href="../img/sprite.svg#call"></use>
-              </svg>
-              +7 495 424-23-532</a>
+      <div class="contact__left grid">
+        <div class="contact__picture">
+          <picture class="contact__img" loading="lazy">
+            <source srcset="../img/map_mobile.jpg" media="(max-width: 576px)">
+            <source srcset="../img/map_mini-tablet.jpg" media="(max-width: 992px)">
+            <source srcset="../img/map_tablet.jpg" media="(max-width: 1024px)">
+            <img src="../img/map.jpg" srcset="../img/map_2x.jpg" alt="Map">
+          </picture>
+          <div class="contact__main">
+            <div class="contact__text-inner">
+              <h1 class="contact__main-title">Студия «High pass»</h1>
+              <p class="contact__address">107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82</p>
+              <div class="contact__call flex">
+                <a href="tel:749542423532" class="contact__phone flex">
+                  <svg class="contact__call-svg">
+                    <use xlink:href="../img/sprite.svg#call"></use>
+                  </svg>
+                  +7 495 424-23-532
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="contact__dark">
-        <div class="contact__x"><img src="../img/х.svg" alt="X"></div>
       </div>
       <div class="contact__right">
         <h3 class="contact__subtitle">Оставить заявку</h3>

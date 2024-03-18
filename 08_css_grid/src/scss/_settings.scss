@@ -110,6 +110,18 @@ a {
   display: grid;
   column-gap: var(--offset);
   grid-template-columns: repeat(12, 1fr);
+
+  @include tablet {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @include mini-tablet {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .flex {
@@ -118,4 +130,37 @@ a {
 
 .w-100 {
   width: 100%;
+}
+
+@include tablet {
+  :root {
+    --content-width: 962px;
+  }
+}
+
+@include mini-tablet {
+  :root {
+    --content-width: 714px;
+  }
+}
+
+@include mobile {
+  :root {
+    --content-width: 278px;
+  }
+}
+
+.burger {
+  @include burger;
+
+  --burger-height: 20px;
+  --burger-width: 20px;
+  color: var(--light-color);
+  z-index: 200;
+
+  display: none;
+
+  @include small-tablet {
+    display: block;
+  }
 }

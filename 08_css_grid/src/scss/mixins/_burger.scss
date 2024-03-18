@@ -14,12 +14,21 @@
   background-color: transparent;
   cursor: pointer;
 
-  &::before,
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     left: 0;
     width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 50%;
     height: var(--burger-line-height);
     background-color: currentColor;
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
@@ -45,21 +54,34 @@
   }
 
   &--active {
+    top: -70px;
+    left: 5px;
+    background-image: none;
+    background-image: url("../../img/х.svg");
+    // opacity: 0;
+    transition: background-image 3s ease-in-out;
+
     &::before {
-      top: 50%;
-      transform: rotate(45deg);
+      height: 0;
+      top: 0;
+      // transform: rotate(45deg);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
     &::after {
-      top: 50%;
-      transform: rotate(-45deg);
+      height: 0;
+      top: 0;
+      // width: 100%;
+      // transform: rotate(-45deg);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
     .burger__line {
-      transform: scale(0);
-      transition: transform 0.3s ease-in-out;
+      height: 0;
+      // transition: background-image 3s ease-in-out;
+      // transform: scale(0);
+      // transition: transform 0.3s ease-in-out;
+      // transition: height 3.3s ease-in-out;
     }
   }
 }

@@ -9,17 +9,50 @@
     grid-column: 3 span;
     margin-bottom: 6px;
 
+    @include tablet {
+      grid-column: 2 span;
+    }
+
+    @include small-tablet {
+      grid-column: 3 span;
+    }
+
+    @include mobile {
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+      // grid-column: 2 span;
+    }
+
     &-text {
       font-family: var(--second-family);
       font-weight: 400;
       font-size: 14px;
       color: var(--light-grey);
+
+      @include tablet {
+        font-size: 13.2px;
+      }
+
+      @include mobile {
+        font-size: 10px;
+      }
     }
+
   }
 
   &__center {
     grid-column: 5 / 4 span;
     padding-right: 35px;
+
+    @include tablet {
+      grid-column: 4 / 3 span;
+      padding-right: 0;
+    }
+
+    @include mini-tablet {
+      display: none;
+    }
   }
 
   &__text {
@@ -28,12 +61,44 @@
     font-size: 16px;
     line-height: 137%;
     color: var(--silver);
+
+    @include tablet {
+      font-size: 15.5px;
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
   }
 
   &__right {
     flex-wrap: wrap;
     grid-column: 11 / 2 span;
     padding-left: 29px;
+
+    @include big-desktop {
+      justify-content: center;
+      grid-column: 10 / 3 span;
+    }
+
+    @include tablet {
+      grid-column: 7 / 2 span;
+      padding-left: 55px;
+    }
+
+    @include mini-tablet {
+      grid-column: 5 / 2 span;
+    }
+
+    @include small-tablet {
+      grid-column: 5 / 3 span;
+      padding-left: 25px;
+    }
+
+    @include mobile {
+      padding-left: 0;
+      // grid-column: 2 span;
+    }
   }
 
   &__social {
@@ -41,11 +106,42 @@
     justify-content: center;
     width: 100%;
     gap: 20px;
+
+    @include mobile {
+      margin-bottom: 44px;
+    }
   }
 
   &__logo {
     outline: 0 solid transparent;
     transition: outline 0.3s ease-in-out;
+
+    @include tablet {
+      margin-bottom: 5px;
+      padding-right: 52px;
+    }
+
+    @include mobile {
+      padding-right: 0;
+      width: 112px;
+      margin-bottom: 0;
+      align-self: center;
+    }
+  }
+
+  &__container {
+    @include mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  @include tablet {
+    padding-top: 28px;
+  }
+
+  @include mobile {
+    padding-bottom: 15px;
   }
 }
 

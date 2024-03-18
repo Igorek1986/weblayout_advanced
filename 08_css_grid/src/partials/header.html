@@ -1,9 +1,9 @@
 <header class="header">
   <div class="container header__container grid">
-    <div class="flex header__logo">
+    <div class="flex header__logo header__1">
       <a><img src="../img/logo.svg" alt="Logo"></a>
     </div>
-    <nav class="nav header__nav" aria-label="Главная">
+    <nav class="nav header__nav header__2" aria-label="Главная" data-menu>
       <ul class="list-reset nav__list flex">
         <li class="nav__item"><a href="#" class="nav__link">О студии</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Наши проекты</a></li>
@@ -11,10 +11,26 @@
         <li class="nav__item"><a href="#" class="nav__link">Мастер классы</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
       </ul>
+      <a href="tel:749542423532" class="header__phone">
+        <svg class="header__call-svg">
+          <use xlink:href="../img/sprite.svg#call"></use>
+        </svg>
+        +7 495 424-23-532
+      </a>
     </nav>
-    <div class="btn flex header__btn">
+
+    <ul class="menu" style="display: none;" data-menu>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span class="burger__line"></span>
+    </button>
+    <div class="btn flex header__btn header__3">
       <button aria-label="Поиск" class="btn-reset search">
-        <!-- <img src="../img/search.svg" alt="Search"> -->
         <svg class="header__search">
           <use xlink:href="../img/sprite.svg#search"></use>
         </svg>

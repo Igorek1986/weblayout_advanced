@@ -1,40 +1,199 @@
 /* stylelint-disable order/order */
 .contact {
-  padding: 68px 0;
+  padding-top: 68px;
+  padding-bottom: 64px;
   background-color: var(--light-color);
 
   &__title {
     margin: 0;
-    margin-bottom: 26px;
+    margin-bottom: 24px;
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 24px;
+
+    @include mobile {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
   }
 
   &__left {
     position: relative;
     grid-column: 1 / 8 span;
     grid-row: 1 / 1;
-    background-image: url("../../img/map.jpg");
-    background-repeat: no-repeat;
+    // background-image: url("../../img/map.jpg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
+    @include tablet {
+      grid-column: 1 / 5 span;
+      // background-image: url("../../img/map_tablet.jpg");
+      // background-repeat: no-repeat;
+      // background-size: cover;
+    }
+
+    @include mini-tablet {
+      grid-column: 6 span;
+      // background-image: url("../../img/map_mini-tablet.jpg");
+      // background-repeat: no-repeat;
+      // background-size: cover;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+    }
+  }
+
+  &__img {
+    display: block;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgb(32 32 32 / 85%);
+      height: 99%;
+      width: 48.2%;
+      // z-index: 1;
+
+      @include tablet {
+        width: 100%;
+        height: 34.3%;
+        bottom: 0;
+        top: auto;
+      }
+
+      @include mini-tablet {
+        margin-bottom: 4px;
+        bottom: -1px;
+        height: 33.9%;
+      }
+
+      @include mobile {
+        // position: unset;
+        width: 100vw;
+        margin: 0 calc(50% - 50vw);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5%;
+      left: 43.5%;
+      background-image: url("../../img/х.svg");
+      background-repeat: no-repeat;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+
+      @include tablet {
+        width: 100%;
+        height: 100%;
+        top: 70%;
+        // right: 0;
+        left: 93.2%;
+      }
+
+      @include mini-tablet {
+        left: 94.4%;
+      }
+
+      @include mobile {
+        left: 87.4%;
+        top: 70.4%;
+      }
+    }
+  }
+
+  &__picture {
+    position: relative;
+    grid-column: 1 / 12 span;
+    grid-row: 1 / 1;
+
+    @include mobile {
+      grid-column: 1 / 2 span;
+      display: flex;
+      margin: 0 calc(50% - 50vw);
+      justify-content: center;
+    }
+  }
+
+  &__text-inner {
+    width: 40%;
+    margin: auto 0;
+    z-index: 10;
+
+    @include tablet {
+      padding-top: 306px;
+      width: 100%;
+    }
+
+    @include mini-tablet {
+      padding-top: 66%;
+    }
+
+    @include mobile {
+      margin: 0;
+      margin-top: auto;
+      padding-top: 0;
+    }
   }
 
   &__dark {
-    position: relative;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // width: 50%;
+    // height: 100%;
+    // margin-bottom: 5px;
     z-index: 5;
-    grid-column: 1 / 4 span;
+    grid-column: 1 / 6 span;
     grid-row: 1 / 1;
     background: rgb(32 32 32 / 85%);
+
+    @include tablet {
+      grid-column: 1 / 5 span;
+      margin-top: auto;
+      min-height: 34%;
+    }
+
+    @include mini-tablet {
+      grid-column: 1 / 6 span;
+    }
   }
 
   &__main {
-    position: relative;
-    z-index: 10;
-    margin: auto 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
     padding-top: 22px;
     padding-right: 50px;
     padding-left: 60px;
-    width: 48.24%;
+
+    @include tablet {
+      margin: 0;
+      margin-top: auto;
+      padding-bottom: 20px;
+      padding-left: 30px;
+      width: 70%;
+    }
+
+    @include mobile {
+      width: 268px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      padding: 0;
+      padding-bottom: 11px;
+      padding-left: -10px;
+    }
 
     &-title {
       margin: 0;
@@ -44,6 +203,19 @@
       font-size: 24px;
       line-height: 92%;
       color: var(--light-color);
+
+      @include small-tablet {
+        font-size: 18px;
+      }
+
+      @include mobile {
+        margin-bottom: 12px;
+        line-height: 122%;
+      }
+    }
+
+    @include mini-tablet {
+      padding-right: 2%;
     }
   }
 
@@ -60,15 +232,41 @@
     font-size: 16px;
     line-height: 175%;
     color: var(--silver);
+
+    @include tablet {
+      display: inline;
+      margin-right: 4px;
+    }
+
+    @include mini-tablet {
+      display: block;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+      line-height: 129%;
+    }
   }
 
   &__call {
     align-items: center;
 
+    @include tablet {
+      display: inline-block;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+
     &-svg {
       width: 22px;
       height: 22px;
-      fill: currentColor;
+      fill: currentcolor;
     }
   }
 
@@ -79,6 +277,14 @@
     font-size: 16px;
     color: var(--orange-red);
     transition: color 0.3s ease-in-out;
+
+    @include tablet {
+      align-items: baseline;
+    }
+
+    @include mini-tablet {
+      align-items: center;
+    }
 
     @include hover {
       color: var(--dark-orange);
@@ -91,6 +297,18 @@
 
   &__right {
     grid-column: 4 span;
+
+    @include tablet {
+      grid-column: 3 span;
+    }
+
+    @include mini-tablet {
+      grid-column: 4 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+    }
   }
 
   &__subtitle {
@@ -102,6 +320,15 @@
     font-size: 24px;
     line-height: 92%;
     color: var(--dark-color);
+
+    @include mini-tablet {
+      margin-top: -3px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 122%;
+    }
   }
 
   &__descr {
@@ -111,6 +338,11 @@
     font-size: 16px;
     line-height: 137%;
     color: var(--grey);
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 129%;
+    }
   }
 
   &__form {
@@ -120,14 +352,33 @@
   }
 
   &__textarea {
-    margin-bottom: -4px;
+    margin-bottom: -5px;
     padding-bottom: 26px;
+
+    @include mobile {
+      padding-bottom: 44px;
+    }
+  }
+
+  &__content {
+    @include mini-tablet {
+      gap: 24px;
+    }
+  }
+
+  @include mini-tablet {
+    padding-bottom: 68px;
+  }
+
+  @include mobile {
+    padding-top: 34px;
+    padding-bottom: 50px;
   }
 }
 
 .contact__phone.focus-visible {
-  color: var(--brown);
   outline: 0 solid transparent;
+  color: var(--brown);
 }
 
 .contact__phone.focus-visible:active {

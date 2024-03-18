@@ -23,10 +23,10 @@
   <div class="site-container">
     <header class="header">
   <div class="container header__container grid">
-    <div class="flex header__logo">
+    <div class="flex header__logo header__1">
       <a><img src="../img/logo.svg" alt="Logo"></a>
     </div>
-    <nav class="nav header__nav" aria-label="Главная">
+    <nav class="nav header__nav header__2" aria-label="Главная" data-menu>
       <ul class="list-reset nav__list flex">
         <li class="nav__item"><a href="#" class="nav__link">О&nbsp;студии</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Наши проекты</a></li>
@@ -34,10 +34,26 @@
         <li class="nav__item"><a href="#" class="nav__link">Мастер классы</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
       </ul>
+      <a href="tel:749542423532" class="header__phone">
+        <svg class="header__call-svg">
+          <use xlink:href="../img/sprite.svg#call"></use>
+        </svg>
+        +7&nbsp;495&nbsp;424-23-532
+      </a>
     </nav>
-    <div class="btn flex header__btn">
+
+    <ul class="menu" style="display: none;" data-menu>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span class="burger__line"></span>
+    </button>
+    <div class="btn flex header__btn header__3">
       <button aria-label="Поиск" class="btn-reset search">
-        <!-- <img src="../img/search.svg" alt="Search"> -->
         <svg class="header__search">
           <use xlink:href="../img/sprite.svg#search"></use>
         </svg>
@@ -58,9 +74,23 @@
     <div class="hero__submain">
       <h3 class="hero__subtitle">Работы участников предыдущего мастер-класса</h3>
       <div class="hero__submain-card grid">
-        <img src="../img/hero_2.jpg" alt="Girl" class="hero__submain-img">
-        <img src="../img/hero_3.jpg" alt="Girl" class="hero__submain-img">
-        <img src="../img/hero_4.jpg" alt="Girl" class="hero__submain-img">
+        <picture class="hero__submain-img" loading="lazy">
+          <source srcset="../img/hero_2_mini-tablet.jpg" media="(max-width: 992px)">
+          <source srcset="../img/hero_2_tablet.jpg" media="(max-width: 1024px)">
+          <img src="../img/hero_2.jpg" srcset="../img/hero_2_2x.jpg" alt="Girl">
+        </picture>
+        <picture class="hero__submain-img" loading="lazy">
+          <source srcset="../img/hero_3_mini-tablet.jpg" media="(max-width: 992px)">
+          <source srcset="../img/hero_3_tablet.jpg" media="(max-width: 1024px)">
+          <img src="../img/hero_3.jpg" srcset="../img/hero_3_2x.jpg" alt="Girl">
+        </picture>
+        <picture class="hero__submain-img" loading="lazy">
+          <source srcset="../img/hero_4_mini-tablet.jpg" media="(max-width: 992px)">
+          <source srcset="../img/hero_4_tablet.jpg" media="(max-width: 1024px)">
+          <img src="../img/hero_4.jpg" srcset="../img/hero_4_2x.jpg" alt="Girl">
+        </picture>
+        <!-- <img src="../img/hero_3.jpg" alt="Girl" class="hero__submain-img">
+        <img src="../img/hero_4.jpg" alt="Girl" class="hero__submain-img"> -->
       </div>
     </div>
   </div>
@@ -73,7 +103,12 @@
       <p class="studios__descr">В&nbsp;рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от&nbsp;нас&nbsp;анализа соответствующих условий активизации! Следует отметить, что&nbsp;семантический разбор внешних противодействий фиксирует необходимость распределения внутренних резервов и&nbsp;ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для&nbsp;первоочередных требований. Повседневная практика показывает, что&nbsp;глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-технической и&nbsp;кадровой базы. Приятно, граждане, наблюдать, как&nbsp;явные признаки институционализации являются только методом политического участия и&nbsp;нарушающими общечеловеческие нормы этики.</p>
     </div>
     <div class="studios__right">
-      <img src="../img/studios_1.jpg" alt="camera" class="studios__img">
+      <picture loading="lazy">
+        <source srcset="../img/studios_1_mobile.jpg" media="(max-width: 576px)">
+        <source srcset="../img/studios_1_mini-tablet.jpg" media="(max-width: 992px)">
+        <source srcset="../img/studios_1_tablet.jpg" media="(max-width: 1024px)">
+        <img src="../img/studios_1.jpg" srcset="../img/studios_1_2x.jpg" alt="camera" class="studios__img">
+      </picture>
       <div class="studios__subscrible flex">
         <h3 class="studios__subtitle">Подписаться на&nbsp;рассылку</h3>
         <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="studios__form">
@@ -92,9 +127,13 @@
   <div class="container grid">
     <h3 class="project__title">Наши проекты</h3>
     <div class="project__content grid">
-      <div class="project__card-1 flex">
-        <img src="../img/project_1.jpg" alt="пейзаж" class="project__img">
-        <p class="project__card-1-descr">Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени&hellip;</p>
+      <div class="project__card-1 flex project__1">
+        <picture class="project__img" loading="lazy">
+          <source srcset="../img/project_1_mobile.jpg" media="(max-width: 576px)">
+          <source srcset="../img/project_1_tablet.jpg" media="(max-width: 1024px)">
+          <img src="../img/project_1.jpg" srcset="../img/project_1_2x.jpg" alt="пейзаж">
+        </picture>
+        <p class="project__card-1-descr project__card-1-descr--line-clamp">Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени&hellip;</p>
         <div class="project__card-1-date">
           <svg class="calendar" viewBox="0 0 32 32">
             <use xlink:href="../img/sprite.svg#calendar"></use>
@@ -103,9 +142,13 @@
         </div>
         <span class="project__sticker">#пейзаж</span>
       </div>
-      <div class="project__card-1 flex">
-        <img src="../img/project_2.jpg" alt="портрет" class="project__img">
-        <p class="project__card-1-descr">Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени&hellip;</p>
+      <div class="project__card-1 flex project__2">
+        <picture class="project__img" loading="lazy">
+          <source srcset="../img/project_2_mobile.jpg" media="(max-width: 576px)">
+          <source srcset="../img/project_2_tablet.jpg" media="(max-width: 1024px)">
+          <img src="../img/project_2.jpg" srcset="../img/project_2_2x.jpg" alt="портрет" >
+        </picture>
+        <p class="project__card-1-descr project__card-1-descr--line-clamp">В&nbsp;своём стремлении улучшить опыт мы&nbsp;упускаем, что&nbsp;явные&hellip;</p>
         <div class="project__card-1-date">
           <svg class="calendar" viewBox="0 0 32 32">
             <use xlink:href="../img/sprite.svg#calendar"></use>
@@ -114,9 +157,14 @@
         </div>
         <span class="project__sticker">#портрет</span>
       </div>
-      <div class="project__card-1 flex">
-        <img src="../img/project_3.jpg" alt="предмет" class="project__img">
-        <p class="project__card-1-descr">Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени&hellip;</p>
+      <div class="project__card-1 flex project__3">
+        <picture class="project__img" loading="lazy">
+          <source srcset="../img/project_3_mobile.jpg" media="(max-width: 576px)">
+          <source srcset="../img/project_3_mini-tablet.jpg" media="(max-width: 992px)">
+          <source srcset="../img/project_3_tablet.jpg" media="(max-width: 1024px)">
+          <img src="../img/project_3.jpg" srcset="../img/project_3_2x.jpg" alt="предмет">
+        </picture>
+        <p class="project__card-1-descr project__card-1-descr--line-clamp project__card-3-mobile">Равным образом, высокое качество позиционных высокотехнологичная концепция общественного уклада</p>
         <div class="project__card-1-date">
           <svg class="calendar" viewBox="0 0 32 32">
             <use xlink:href="../img/sprite.svg#calendar"></use>
@@ -125,7 +173,7 @@
         </div>
         <span class="project__sticker">#предмет</span>
       </div>
-      <div class="project__card-bg project__card-bg-1 flex">
+      <div class="project__card-bg project__card-bg-1 flex project__4">
         <div class="project__card-bg-content">
           <div class="project__card-1-date project__card-1-date-bg">
             <svg class="calendar calendar-bg" viewBox="0 0 32 32">
@@ -141,7 +189,7 @@
           <button class="btn btn-reset project__btn">О&nbsp;проекте</button>
         </div>
       </div>
-      <div class="project__card-bg project__card-bg-2 flex">
+      <div class="project__card-bg project__card-bg-2 flex project__5">
         <div class="project__card-bg-content">
           <div class="project__card-1-date project__card-1-date-bg">
             <svg class="calendar calendar-bg" viewBox="0 0 32 32">
@@ -150,16 +198,20 @@
             <span class="project__card-1-text--bg">20&nbsp;марта</span>
           </div>
           <h3 class="project__subtitle">Забвение</h3>
-          <p class="project__card-1-descr project__card-1-descr--bg">Играет важную роль в&nbsp;формировании глубокомысленных рассуждений</p>
+          <p class="project__card-1-descr project__card-1-descr--bg project__card-1-descr--bg-2">Играет важную роль в&nbsp;формировании глубокомысленных рассуждений</p>
           <span class="project__sticker">#проектзабвение</span>
         </div>
         <div class="project__card-bg-bottom">
           <button class="btn btn-reset project__btn">О&nbsp;проекте</button>
         </div>
       </div>
-      <div class="project__card-1 project__card-1--gc flex">
-        <img src="../img/project_4.jpg" alt="предмет" class="project__img">
-        <p class="project__card-1-descr">Как&nbsp;принято считать, многие известные личности и&nbsp;по&nbsp;сей день остаются уделом либералов&hellip;</p>
+      <div class="project__card-1 project__card-1--gc flex project__6">
+        <picture class="project__img project__img--6" loading="lazy">
+          <source srcset="../img/project_4_mobile.jpg" media="(max-width: 576px)">
+          <source srcset="../img/project_4_tablet.jpg" media="(max-width: 1024px)">
+          <img src="../img/project_4.jpg" srcset="../img/project_4_2x.jpg" alt="ретушь">
+        </picture>
+        <p class="project__card-1-descr project__card-1-descr-6">Как&nbsp;принято считать, многие известные личности и&nbsp;по&nbsp;сей день остаются уделом либералов&hellip;</p>
         <div class="project__card-1-date">
           <svg class="calendar" viewBox="0 0 32 32">
             <use xlink:href="../img/sprite.svg#calendar"></use>
@@ -168,9 +220,13 @@
         </div>
         <span class="project__sticker">#ретушь</span>
       </div>
-      <div class="project__card-1 project__card-1--gc flex">
-        <img src="../img/project_5.jpg" alt="предмет" class="project__img">
-        <p class="project__card-1-descr">Как&nbsp;принято считать, многие известные личности и&nbsp;по&nbsp;сей день остаются уделом либералов&hellip;</p>
+      <div class="project__card-1 project__card-1--gc flex project__7">
+        <picture class="project__img" loading="lazy">
+          <source srcset="../img/project_5_mobile.jpg" media="(max-width: 1024px)">
+          <source srcset="../img/project_5_tablet.jpg" media="(max-width: 1024px)">
+          <img src="../img/project_5.jpg" srcset="../img/project_5_2x.jpg" alt="портрет">
+        </picture>
+        <p class="project__card-1-descr project__card-1-descr-7">С&nbsp;учётом сложившейся международной обстановки, новая модель организационной&hellip;</p>
         <div class="project__card-1-date">
           <svg class="calendar" viewBox="0 0 32 32">
             <use xlink:href="../img/sprite.svg#calendar"></use>
@@ -187,25 +243,29 @@
   <div class="container">
     <h3 class="contact__title">Контакты</h3>
     <div class="contact__content grid">
-      <div class="contact__left flex">
-        <div class="contact__main">
-          <h1 class="contact__main-title">Студия &laquo;High pass&raquo;</h1>
-          <p class="contact__address">107045, Москва, Даев переулок, дом&nbsp;41, бизнес-центр &laquo;Даев Плаза&raquo;, этаж 8, офис № 82</p>
-          <!-- <img src="../img/call.svg" alt="трубка" class="contact__call-img"> -->
-          <!-- <svg class="contact__call-svg">
-            <use xlink:href="../img/sprite.svg#call"></use>
-          </svg> -->
-          <div class="contact__call flex">
-            <a href="tel:749542423532" class="contact__phone flex">
-              <svg class="contact__call-svg">
-                <use xlink:href="../img/sprite.svg#call"></use>
-              </svg>
-              +7&nbsp;495&nbsp;424-23-532</a>
+      <div class="contact__left grid">
+        <div class="contact__picture">
+          <picture class="contact__img" loading="lazy">
+            <source srcset="../img/map_mobile.jpg" media="(max-width: 576px)">
+            <source srcset="../img/map_mini-tablet.jpg" media="(max-width: 992px)">
+            <source srcset="../img/map_tablet.jpg" media="(max-width: 1024px)">
+            <img src="../img/map.jpg" srcset="../img/map_2x.jpg" alt="Map">
+          </picture>
+          <div class="contact__main">
+            <div class="contact__text-inner">
+              <h1 class="contact__main-title">Студия &laquo;High pass&raquo;</h1>
+              <p class="contact__address">107045, Москва, Даев переулок, дом&nbsp;41, бизнес-центр &laquo;Даев Плаза&raquo;, этаж 8, офис № 82</p>
+              <div class="contact__call flex">
+                <a href="tel:749542423532" class="contact__phone flex">
+                  <svg class="contact__call-svg">
+                    <use xlink:href="../img/sprite.svg#call"></use>
+                  </svg>
+                  +7&nbsp;495&nbsp;424-23-532
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="contact__dark">
-        <div class="contact__x"><img src="../img/х.svg" alt="X"></div>
       </div>
       <div class="contact__right">
         <h3 class="contact__subtitle">Оставить заявку</h3>
@@ -231,7 +291,7 @@
 
     </main>
     <footer class="footer">
-  <div class="container grid">
+  <div class="container grid footer__container">
     <div class="footer__left flex">
       <a href="#" class="footer__logo">
         <img src="../img/logo.svg" alt="Footer Logo" class="footer__link">

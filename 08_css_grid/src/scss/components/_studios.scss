@@ -11,10 +11,35 @@
     font-weight: 700;
     font-size: 24px;
     color: var(--light-color);
+
+    @include tablet {
+      grid-column: 8 span;
+    }
+
+    @include mini-tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+      font-size: 18px;
+    }
   }
 
   &__left {
     grid-column: 6 span;
+
+    @include tablet {
+      grid-column: 4 span;
+    }
+
+    @include mini-tablet {
+      grid-column: 3 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+    }
   }
 
   &__descr {
@@ -23,10 +48,28 @@
     font-size: 16px;
     line-height: 175%;
     color: var(--silver);
+
+    @include mobile {
+      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 179%;
+    }
   }
 
   &__right {
     grid-column: 6 span;
+
+    @include tablet {
+      grid-column: 4 span;
+    }
+
+    @include mini-tablet {
+      grid-column: 3 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+    }
   }
 
   &__subscrible {
@@ -36,6 +79,14 @@
 
   &__img {
     margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 18px;
+    }
+
+    @include mobile {
+      margin-bottom: 22px;
+    }
   }
 
   &__subtitle {
@@ -47,15 +98,47 @@
     font-size: 24px;
     line-height: 92%;
     color: var(--light-color);
+
+    @include mobile {
+      margin-bottom: 15px;
+      font-size: 18px;
+      line-height: 122%;
+    }
   }
 
   &__form {
     width: 75.24%;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__email {
     width: 100%;
     color: var(--silver);
     background-color: var(--dark-grey);
+
+    @include tablet {
+      margin-bottom: 21px;
+      width: 98%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  @include tablet {
+    padding-top: 34px;
+    padding-bottom: 81px;
+  }
+
+  @include mini-tablet {
+    padding-bottom: 63px;
+  }
+
+  @include mobile {
+    padding-bottom: 59px;
   }
 }

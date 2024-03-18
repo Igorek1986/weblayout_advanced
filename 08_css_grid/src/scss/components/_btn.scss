@@ -21,6 +21,11 @@
     border-color: var(--brown);
     background-color: var(--brown);
   }
+
+  @include mobile {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
 }
 
 .btn.focus-visible {
