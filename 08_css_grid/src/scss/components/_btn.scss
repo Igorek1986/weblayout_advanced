@@ -1,0 +1,33 @@
+/* stylelint-disable order/order */
+.btn {
+  padding: 15.5px 22px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--orange-red);
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, outline 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include hover {
+    border-color: var(--dark-orange);
+    background-color: var(--dark-orange);
+  }
+
+  &:active {
+    border-color: var(--brown);
+    background-color: var(--brown);
+  }
+
+  @include mobile {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+}
+
+.btn.focus-visible {
+  outline: 3px solid var(--dark-orange);
+}

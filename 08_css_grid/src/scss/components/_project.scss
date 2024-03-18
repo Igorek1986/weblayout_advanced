@@ -1,0 +1,413 @@
+/* stylelint-disable order/order */
+.project {
+  padding-top: 71px;
+  background-color: var(--light-color);
+
+  &__title {
+    grid-column: 12 span;
+    margin: 0;
+    margin-bottom: 12px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--dark-color);
+
+    @include tablet {
+      grid-column: 8 span;
+    }
+
+    @include mini-tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+      margin-bottom: 17px;
+      font-size: 18px;
+    }
+  }
+
+  &__content {
+    grid-column: 12 span;
+    row-gap: var(--offset);
+
+    @include tablet {
+      grid-column: 8 span;
+      grid-template-areas:
+        "card-1 card-1 card-2 card-2 card-3 card-3 card-3 card-3"
+        "card-4 card-4 card-4 card-4 card-4 card-6 card-6 card-6"
+        "card-7 card-7 card-7 card-5 card-5 card-5 card-5 card-5";
+      row-gap: 25px;
+    }
+
+    @include mini-tablet {
+      grid-column: 6 span;
+      grid-template-areas:
+        "card-1 card-1 card-2 card-2 card-3 card-3"
+        "card-4 card-4 card-4 card-4 card-4 card-4"
+        "card-6 card-6 card-6 card-7 card-7 card-7"
+        "card-5 card-5 card-5 card-5 card-5 card-5";
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+      grid-template-areas:
+        "card-1"
+        "card-2"
+        "card-3"
+        "card-4"
+        "card-6"
+        "card-7"
+        "card-5";
+    }
+  }
+
+  &__card-1 {
+    position: relative;
+    flex-direction: column;
+    grid-column: 2 span;
+
+    &--gc {
+      grid-column: 3 span;
+    }
+
+    &-descr {
+      /* stylelint-disable value-no-vendor-prefix */
+      display: -webkit-box;
+      overflow: hidden;
+      margin: 0;
+      margin-bottom: 10px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 137%;
+      color: var(--dark-color);
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+
+      @include tablet {
+        margin-bottom: 17px;
+
+        &--line-clamp {
+          -webkit-line-clamp: 2;
+        }
+      }
+
+      @include mini-tablet {
+        &--line-clamp {
+          margin-bottom: 11px;
+          -webkit-line-clamp: 3;
+        }
+      }
+
+      &--bg {
+        margin-bottom: 0;
+        width: 49%;
+        color: var(--light-color);
+
+        @include mini-tablet {
+          margin-bottom: 47px;
+          width: 43%;
+        }
+
+        @include mobile {
+          margin-bottom: 16px;
+          width: 88%;
+          font-size: 14px;
+          line-height: 129%;
+          -webkit-line-clamp: 4;
+        }
+
+        &-2 {
+          @include mobile {
+            margin-bottom: 22px;
+          }
+        }
+      }
+
+      &-6 {
+        @include mobile {
+          margin-bottom: 12px;
+        }
+      }
+
+      &-7 {
+        @include mobile {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &-date {
+      display: flex;
+      align-items: center;
+      margin-top: auto;
+
+      &-bg {
+        margin-bottom: 5px;
+
+        @include mobile {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &-text {
+      margin: 0;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 183%;
+      color: var(--grey);
+
+      &--bg {
+        font-size: 12px;
+        color: var(--light-color);
+      }
+    }
+  }
+
+  &__img {
+    margin-bottom: 14px;
+
+    &--6 {
+      @include tablet {
+        margin-bottom: 13px;
+      }
+    }
+  }
+
+  &__sticker {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    padding: 6px 14px;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: var(--light-color);
+    background-color: var(--dark-color);
+
+    @include mobile {
+      right: 5px;
+      top: 5px;
+      padding: 4px 14px;
+      font-size: 12px;
+    }
+  }
+
+  &__card-bg {
+    position: relative;
+    flex-direction: column;
+    grid-column: 6 span;
+
+    &-content {
+      padding-top: 26px;
+      padding-left: 30px;
+
+      @include tablet {
+        padding-top: 32px;
+      }
+
+      @include mini-tablet {
+        padding-top: 34px;
+      }
+
+      @include mobile {
+        padding-top: 200px;
+      }
+    }
+
+    &-1 {
+      background-image: url("../../img/project_bg_1.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @include tablet {
+        background-image: url("../../img/project_bg_1_tablet.jpg");
+      }
+
+      @include mini-tablet {
+        background-image: url("../../img/project_bg_1_mini-tablet.jpg");
+      }
+
+      @include mobile {
+        background-image: url("../../img/project_bg_1_mobile.jpg");
+      }
+    }
+
+    &-2 {
+      background-image: url("../../img/project_bg_2.jpg");
+
+      @include tablet {
+        background-image: url("../../img/project_bg_2_tablet.jpg");
+      }
+
+      @include mini-tablet {
+        min-height: 300px;
+        background-image: url("../../img/project_bg_2_mini-tablet.jpg");
+      }
+
+      @include mobile {
+        background-image: url("../../img/project_bg_2_mobile.jpg");
+      }
+    }
+
+    &-bottom {
+      margin-top: auto;
+      padding-bottom: 30px;
+      padding-left: 30px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 6px;
+    width: 45%;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: var(--light-color);
+
+    @include mini-tablet {
+      width: 40%;
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btn {
+    border: 3px solid var(--orange-red);
+    padding: 13px 20px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, border 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      border-color: var(--brown);
+      background-color: var(--brown);
+    }
+
+    &:active {
+      border-color: var(--dark-orange);
+      background-color: var(--dark-orange);
+    }
+
+    @include mobile {
+      padding: 9px 18px;
+    }
+  }
+
+  &__1 {
+    @include tablet {
+      grid-area: card-1;
+      grid-column: 2 span;
+    }
+  }
+
+  &__2 {
+    @include tablet {
+      grid-area: card-2;
+      grid-column: 2 span;
+      margin-bottom: 0;
+    }
+  }
+
+  &__3 {
+    @include tablet {
+      grid-area: card-3;
+      grid-column: 4 span;
+      margin-bottom: 0;
+    }
+
+    @include mini-tablet {
+      grid-column: 2 span;
+    }
+  }
+
+  &__4 {
+    @include tablet {
+      grid-area: card-4;
+      grid-column: 5 span;
+    }
+
+    @include mini-tablet {
+      grid-column: 6 span;
+      margin-bottom: 5px;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+      margin-bottom: 1px;
+    }
+  }
+
+  &__5 {
+    @include tablet {
+      grid-area: card-5;
+    }
+
+    @include mini-tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+    }
+  }
+
+  &__6 {
+    @include tablet {
+      grid-area: card-6;
+      grid-column: 3 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+    }
+  }
+
+  &__7 {
+    @include tablet {
+      grid-area: card-7;
+      grid-column: 3 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+    }
+  }
+
+  @include mobile {
+    &__card-3-mobile {
+      overflow: hidden;
+      margin-bottom: 7px;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+  }
+
+  @include mobile {
+    padding-top: 51px;
+  }
+}
+
+.project__btn.focus-visible {
+  border: 3px solid var(--orange-red);
+  background-color: var(--brown);
+}
+
+.calendar {
+  margin-right: 4px;
+  width: 14px;
+  height: 14px;
+  fill: var(--grey);
+}
+
+.calendar-bg {
+  fill: var(--light-color);
+}
