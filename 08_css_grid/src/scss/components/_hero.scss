@@ -9,21 +9,20 @@
     padding-top: 405px;
     padding-left: 59px;
     background-image: url("../../img/hero_1.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
 
     @include tablet {
       grid-column: 4 span;
       padding-top: 427px;
       padding-left: 30px;
       background-image: url("../../img/hero_1_tablet.jpg");
-      // background-repeat: no-repeat;
     }
 
     @include mini-tablet {
       grid-column: 3 span;
-      background-image: url("../../img/hero_1_mini-tablet.jpg");
       padding-top: 226px;
+      background-image: url("../../img/hero_1_mini-tablet.jpg");
     }
 
     @include small-tablet {
@@ -33,8 +32,8 @@
     @include mobile {
       margin-bottom: 32px;
       padding-top: 234px;
-      padding-left: 29px;
       padding-bottom: 30px;
+      padding-left: 29px;
       background-image: url("../../img/hero_1_mobile.jpg");
     }
   }
@@ -78,8 +77,8 @@
     }
 
     @include mobile {
-      width: 68%;
       margin-bottom: 17px;
+      width: 68%;
     }
   }
 
@@ -97,7 +96,6 @@
 
       @include mini-tablet {
         grid-column: 6 span;
-        // margin-bottom: 11px;
       }
 
       @include mobile {

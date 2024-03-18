@@ -21,8 +21,8 @@
     }
 
     @include mobile {
-      margin-bottom: 17px;
       grid-column: 2 span;
+      margin-bottom: 17px;
       font-size: 18px;
     }
   }
@@ -51,20 +51,19 @@
 
     @include mobile {
       grid-column: 2 span;
-      grid-template-areas: "card-1"
-      "card-2"
-      "card-3"
-      "card-4"
-      "card-6"
-      "card-7"
-      "card-5";
+      grid-template-areas:
+        "card-1"
+        "card-2"
+        "card-3"
+        "card-4"
+        "card-6"
+        "card-7"
+        "card-5";
     }
   }
 
   &__card-1 {
     position: relative;
-
-    // flex-wrap: wrap;
     flex-direction: column;
     grid-column: 2 span;
 
@@ -73,16 +72,17 @@
     }
 
     &-descr {
+      /* stylelint-disable value-no-vendor-prefix */
       display: -webkit-box;
+      overflow: hidden;
       margin: 0;
       margin-bottom: 10px;
       font-weight: 400;
       font-size: 16px;
       line-height: 137%;
       color: var(--dark-color);
-      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
-      overflow: hidden;
+      -webkit-line-clamp: 3;
 
       @include tablet {
         margin-bottom: 17px;
@@ -94,8 +94,8 @@
 
       @include mini-tablet {
         &--line-clamp {
-          -webkit-line-clamp: 3;
           margin-bottom: 11px;
+          -webkit-line-clamp: 3;
         }
       }
 
@@ -110,11 +110,11 @@
         }
 
         @include mobile {
-          -webkit-line-clamp: 4;
           margin-bottom: 16px;
           width: 88%;
           font-size: 14px;
           line-height: 129%;
+          -webkit-line-clamp: 4;
         }
 
         &-2 {
@@ -123,6 +123,7 @@
           }
         }
       }
+
       &-6 {
         @include mobile {
           margin-bottom: 12px;
@@ -172,10 +173,6 @@
         margin-bottom: 13px;
       }
     }
-
-    @include mini-tablet {
-      // padding-top: 5px;
-    }
   }
 
   &__sticker {
@@ -221,13 +218,15 @@
 
     &-1 {
       background-image: url("../../img/project_bg_1.jpg");
-      background-repeat: no-repeat;
       background-size: cover;
+      background-repeat: no-repeat;
+
+      @include tablet {
+        background-image: url("../../img/project_bg_1_tablet.jpg");
+      }
 
       @include mini-tablet {
         background-image: url("../../img/project_bg_1_mini-tablet.jpg");
-        // background-repeat: no-repeat;
-        // background-size: cover;
       }
 
       @include mobile {
@@ -237,13 +236,14 @@
 
     &-2 {
       background-image: url("../../img/project_bg_2.jpg");
-      // background-repeat: no-repeat;
+
+      @include tablet {
+        background-image: url("../../img/project_bg_2_tablet.jpg");
+      }
 
       @include mini-tablet {
         min-height: 300px;
         background-image: url("../../img/project_bg_2_mini-tablet.jpg");
-
-        // background-repeat: no-repeat;
       }
 
       @include mobile {
@@ -336,8 +336,8 @@
     }
 
     @include mini-tablet {
-      margin-bottom: 5px;
       grid-column: 6 span;
+      margin-bottom: 5px;
     }
 
     @include mobile {
@@ -384,10 +384,10 @@
 
   @include mobile {
     &__card-3-mobile {
-      margin-bottom: 7px;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
       overflow: hidden;
+      margin-bottom: 7px;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
     }
   }
 

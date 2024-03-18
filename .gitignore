@@ -4,3 +4,10 @@ node_modules
 dist
 **/package-lock.json
 **/.vscode
+**/app
+.htmlhintrc
+.ecrc
+.editorconfig
+**/.stylelintrc.json
+**/package.json
+**/gulpfile.js

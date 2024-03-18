@@ -21,22 +21,13 @@
     position: relative;
     grid-column: 1 / 8 span;
     grid-row: 1 / 1;
-    // background-image: url("../../img/map.jpg");
-    // background-repeat: no-repeat;
-    // background-size: cover;
 
     @include tablet {
       grid-column: 1 / 5 span;
-      // background-image: url("../../img/map_tablet.jpg");
-      // background-repeat: no-repeat;
-      // background-size: cover;
     }
 
     @include mini-tablet {
       grid-column: 6 span;
-      // background-image: url("../../img/map_mini-tablet.jpg");
-      // background-repeat: no-repeat;
-      // background-size: cover;
     }
 
     @include mobile {
@@ -45,56 +36,53 @@
   }
 
   &__img {
-    display: block;
     position: relative;
+    display: block;
 
     &::after {
       content: "";
       position: absolute;
-      top: 0;
       left: 0;
-      background: rgb(32 32 32 / 85%);
-      height: 99%;
+      top: 0;
       width: 48.2%;
-      // z-index: 1;
+      height: 99%;
+      background: rgb(32 32 32 / 85%);
 
       @include tablet {
+        top: auto;
+        bottom: 0;
         width: 100%;
         height: 34.3%;
-        bottom: 0;
-        top: auto;
       }
 
       @include mini-tablet {
-        margin-bottom: 4px;
         bottom: -1px;
+        margin-bottom: 4px;
         height: 33.9%;
       }
 
       @include mobile {
-        // position: unset;
-        width: 100vw;
         margin: 0 calc(50% - 50vw);
+        width: 100vw;
       }
     }
 
     &::before {
       content: "";
       position: absolute;
-      top: 5%;
       left: 43.5%;
-      background-image: url("../../img/х.svg");
-      background-repeat: no-repeat;
+      top: 5%;
       z-index: 2;
       width: 100%;
       height: 100%;
+      background-image: url("../../img/х.svg");
+      background-repeat: no-repeat;
 
       @include tablet {
+        left: 93.2%;
+        top: 70%;
         width: 100%;
         height: 100%;
-        top: 70%;
-        // right: 0;
-        left: 93.2%;
       }
 
       @include mini-tablet {
@@ -114,17 +102,17 @@
     grid-row: 1 / 1;
 
     @include mobile {
-      grid-column: 1 / 2 span;
       display: flex;
-      margin: 0 calc(50% - 50vw);
       justify-content: center;
+      grid-column: 1 / 2 span;
+      margin: 0 calc(50% - 50vw);
     }
   }
 
   &__text-inner {
-    width: 40%;
-    margin: auto 0;
     z-index: 10;
+    margin: auto 0;
+    width: 40%;
 
     @include tablet {
       padding-top: 306px;
@@ -143,12 +131,6 @@
   }
 
   &__dark {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // width: 50%;
-    // height: 100%;
-    // margin-bottom: 5px;
     z-index: 5;
     grid-column: 1 / 6 span;
     grid-row: 1 / 1;
@@ -167,15 +149,15 @@
 
   &__main {
     position: absolute;
-    top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0;
     display: flex;
     align-items: center;
     padding-top: 22px;
     padding-right: 50px;
     padding-left: 60px;
+    width: 100%;
+    height: 100%;
 
     @include tablet {
       margin: 0;
@@ -186,13 +168,12 @@
     }
 
     @include mobile {
-      width: 268px;
       left: 0;
       right: 0;
       margin: 0 auto;
       padding: 0;
       padding-bottom: 11px;
-      padding-left: -10px;
+      width: 268px;
     }
 
     &-title {

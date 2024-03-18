@@ -1,3 +1,4 @@
+/* stylelint-disable order/order */
 html {
   box-sizing: border-box;
 }
@@ -36,7 +37,8 @@ a {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -155,10 +157,10 @@ a {
 
   --burger-height: 20px;
   --burger-width: 20px;
-  color: var(--light-color);
-  z-index: 200;
 
+  z-index: 200;
   display: none;
+  color: var(--light-color);
 
   @include small-tablet {
     display: block;

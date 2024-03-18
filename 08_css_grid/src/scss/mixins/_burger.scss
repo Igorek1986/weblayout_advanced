@@ -58,30 +58,22 @@
     left: 5px;
     background-image: none;
     background-image: url("../../img/х.svg");
-    // opacity: 0;
     transition: background-image 3s ease-in-out;
 
     &::before {
       height: 0;
       top: 0;
-      // transform: rotate(45deg);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
     &::after {
       height: 0;
       top: 0;
-      // width: 100%;
-      // transform: rotate(-45deg);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
     .burger__line {
       height: 0;
-      // transition: background-image 3s ease-in-out;
-      // transform: scale(0);
-      // transition: transform 0.3s ease-in-out;
-      // transition: height 3.3s ease-in-out;
     }
   }
 }
