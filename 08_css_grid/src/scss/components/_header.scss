@@ -21,6 +21,12 @@
         "header-2 header-2 header-2 header-2 header-2 header-2";
     }
 
+    @include small-tablet {
+      grid-template-areas:
+        "header-1 header-1 header-1 header-1 header-1 header-3"
+        "header-2 header-2 header-2 header-2 header-2 header-2";
+    }
+
     @include mobile {
       grid-template-areas:
         "header-1 header-3"
@@ -154,11 +160,12 @@
     }
 
     @include small-tablet {
+      flex-direction: column;
+      padding-top: 58px;
       gap: 15px;
     }
 
     @include mobile {
-      flex-direction: column;
       padding-top: 48px;
       gap: 33px;
     }
