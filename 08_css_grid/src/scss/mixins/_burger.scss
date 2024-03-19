@@ -13,6 +13,7 @@
   color: #000;
   background-color: transparent;
   cursor: pointer;
+  background-size: 0;
 
   &::before {
     content: "";
@@ -56,9 +57,11 @@
   &--active {
     top: -70px;
     left: 5px;
-    background-image: none;
-    background-image: url("../../img/х.svg");
-    transition: background-image 3s ease-in-out;
+    background-image: url("../../img/x.png");
+    background-repeat: no-repeat;
+    // opacity: 1;
+    background-size: 100%;
+    transition: background-size 0.3s ease-in-out;
 
     &::before {
       height: 0;
