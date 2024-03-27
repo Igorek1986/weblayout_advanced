@@ -277,8 +277,8 @@
   }
 
   &__right {
-    grid-column: 4 span;
     z-index: 2;
+    grid-column: 4 span;
 
     @include tablet {
       grid-column: 3 span;
